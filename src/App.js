@@ -83,6 +83,7 @@ function App() {
           setResponseList("");
           setResponseText(response.data.text);
           setResponseTypeOfAlert(response.data.typeOfAlert);
+          setIsLoading(false);
         }
       })
       .then(() => setIsLoading(false), setShowAlert(true))
