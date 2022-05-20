@@ -10,6 +10,7 @@ const Bortskankes = ({
   setMethodNr,
   responseList,
   removeItem,
+  isLoading
 }) => {
   return (
     <>
@@ -18,6 +19,7 @@ const Bortskankes = ({
         handleChange={handleChange}
         fetch={fetch}
         setMethodNr={setMethodNr}
+        isLoading={isLoading}
       />
       <Card removeItem={removeItem}>{responseList}</Card>
     </>

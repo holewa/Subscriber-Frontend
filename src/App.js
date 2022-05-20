@@ -142,6 +142,7 @@ function App() {
                   setMethodNr={setMethodNr}
                   responseList={responseList}
                   removeItem={removeSearchFromUser}
+                  isLoading={isLoading}
                 />
               }
             />

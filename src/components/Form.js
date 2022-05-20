@@ -1,6 +1,6 @@
 import React from "react";
 
-const Form = ({ state, handleChange, fetch, setMethodNr }) => {
+const Form = ({ state, handleChange, fetch, setMethodNr, isLoading }) => {
   return (
     <>
       <form onSubmit={fetch}>
@@ -30,6 +30,7 @@ const Form = ({ state, handleChange, fetch, setMethodNr }) => {
         </div>
         <div>
           <button
+            disabled={isLoading}
             onClick={() => setMethodNr(1)}
             type='submit'
             className='btn btn-primary'
@@ -37,6 +38,7 @@ const Form = ({ state, handleChange, fetch, setMethodNr }) => {
             Skapa prenumeration
           </button>
           <button
+            disabled={isLoading}
             onClick={() => setMethodNr(2)}
             type='submit'
             className='btn btn-primary'
