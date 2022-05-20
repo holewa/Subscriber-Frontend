@@ -74,16 +74,13 @@ function App() {
         headers,
       })
       .then(function (response) {
-        console.log(response.data);
         if (response.data.earlierSearches.length > 0) {
-          setResponseTypeOfAlert("");
           setResponseList(response.data.earlierSearches);
-          setIsLoading(false);
+          setResponseTypeOfAlert("");
         } else {
           setResponseList("");
           setResponseText(response.data.text);
           setResponseTypeOfAlert(response.data.typeOfAlert);
-          setIsLoading(false);
         }
       })
       .then(() => setIsLoading(false), setShowAlert(true))
