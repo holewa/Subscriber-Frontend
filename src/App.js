@@ -74,6 +74,7 @@ function App() {
         headers,
       })
       .then(function (response) {
+        console.log(response.data);
         if (response.data.earlierSearches.length > 0) {
           setResponseList(response.data.earlierSearches);
           setResponseTypeOfAlert("");
